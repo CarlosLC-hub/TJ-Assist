@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupos - Congregación Esperanza</title>
+  <link rel="stylesheet" href="style-grupos.css">
+</head>
+<body>
+
+  <h1>GRUPOS - CONGREGACIÓN ESPERANZA, TENABO</h1>
+
+  <div class="buttons-container">
+    <button class="G1" onclick="showGroup(1)">Grupo 1</button>
+    <button class="G2"onclick="showGroup(2)">Grupo 2</button>
+    <button class="G3"onclick="showGroup(3)">Grupo 3</button>
+  </div>
+
+  <div id="group-list-container">
+    <!-- Aquí se mostrará la lista de nombres -->
+  </div>
+
+
+<script>
+  const groups = {
+    1: ["Iván Edesio Kú Chi","Carlos Manuel Chan Mis","Rodrigo Gerardo Matú Pat","Luis Alberto Uc Uc","Julio César Kú Chi","Soel Mario Roblero Rodríguez","Carlos Miguel López Herrera","Luis Matías Uc Cabrera","Geny del Socorro de Ku","Norma Beatríz de Chan","Esteisy Maricel Chan Uc","Sara de Uc","Ana Irene de Roblero","Yarizbet Isabel Roblero Tomas","Belén de López","Esli Sulamit López Colomé","María Petronila Tuz Chan","Irma del Rosario de Colli","Virgilia García García"],
+    2: ["Ángel Mizrain Caamal Pool","Jamín Manuel Uc Mis","Manuel Francisco Uc López","Miguel Ángel Caamal Pech","Yair Zait Pérez Cabrera","Edward Kú Chi","Candelario Martínez Castillo","Edgar Enrrique Martínez Ku","Cecilia de Uc","Roselvy Edith de Caamal","Lidia Silvestre de Méndez","Arely Abigail de Caamal","Irma del Socorro Tuz Chan","Emi Diani Pool Tuz","Ana Mabel de Quimé","Jael Lizet de Borges","Noemí del Rosario de Martínez","Josefa del Rosario de Tuz"],
+    3: ["Carlos Antonio López Colomé","Manuel Eduardo Matú Pat","Jesús Leonardo Molina Kantún","Mario Enrrique Caamal Pech","Álvaro Canul Ordóñez","Leonardo Asahel Molina Pat","Gustavo Benjamín Molina Pat","Lucía del Carmen de Molina","Danela Monserrat Molina Pat","Yuliana Sarai de Matú","Leticia de Caamal","Maelin Leticia Caamal Flores","Martha Patricia de Canul","Aylin Narai Canul Caamal","Elsa María Kantún Estrella","Paola Isabel de Escamilla","María Magdalena Pat Estrella","Evelin Alexia Matú Pat","Hilda María de Matú"]
+  };
+
+  function showGroup(groupNumber) {
+    const container = document.getElementById('group-list-container');
+    container.innerHTML = "";
+
+    // Quitar selección previa
+    document.querySelectorAll('.buttons-container button')
+      .forEach(btn => btn.classList.remove('activo'));
+
+    // Marcar botón actual
+    event.target.classList.add('activo');
+
+    // Mostrar nombres
+    groups[groupNumber].forEach(name => {
+      const div = document.createElement('div');
+      div.className = `name-card group-${groupNumber}`;
+      div.textContent = name;
+      container.appendChild(div);
+    });
+
+    // 🔹 Total de integrantes
+    const total = document.createElement('div');
+    total.style.marginTop = "15px";
+    total.style.fontWeight = "bold";
+    total.textContent = `Total de integrantes: ${groups[groupNumber].length}`;
+    container.appendChild(total);
+
+    container.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+
+
+</body>
+</html>

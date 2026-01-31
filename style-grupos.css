@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6eabb275; /* Fondo general suave */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+
+#group-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Tarjeta de cada nombre */
+.name-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #ffffff; /* Default */
+}
+
+/* Barra lateral para diferenciar grupo */
+.name-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #4CAF50; /* Default: grupo 1 */
+}
+
+/* Diferenciar colores según grupo */
+.group-1::before { background-color: #4CAF50; } /* verde */
+.group-2::before { background-color: #c0bb3d; } /* azul */
+.group-3::before { background-color: #833291 } /* morado */
+
+.name-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+  button {
+    width: 100%;
+  }
+
+  .name-card {
+    max-width: 100%;
+  }
+}
+
+.G1{
+    background-color: #4CAF50;
+}
+
+.G2{
+  background-color: #c0bb3d;;
+}
+
+.G3{
+  background-color: #833291;
+}
+
+/* Botón seleccionado */
+button.activo {
+  border: 3px solid #fb8f02;
+}
+
+/* Para que el borde no mueva el botón */
+button {
+  box-sizing: border-box;
+}

@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6eabb275; /* Fondo general suave */
+  margin: 0;
+  padding: 20px;
+  color: #140821;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #155316;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 30px auto;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  
+}
+
+.group-table th {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* ---------------------- */
+/* Responsive: mini cards */
+/* ---------------------- */
+@media screen and (max-width: 600px) {
+  table {
+    border: none;
+  }
+
+  thead {
+    display: none; /* Ocultar encabezados tradicionales */
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 12px 15px 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(138, 37, 37, 0.1);
+    background-color: #6caf8d60; /* Tarjeta por defecto: congregación */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  /* Barra superior para diferenciar tablas */
+  tbody tr::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4CAF50; /* Verde: congregación */
+  }
+
+  /* Diferenciar tablas de grupo por color de fondo y barra superior */
+  table.group-table tbody tr {
+    background-color: #78b0de42;; /* Azul muy suave */
+  }
+
+  table.group-table tbody tr::before {
+    background-color: #2196F3; /* barra azul para grupo */
+  }
+
+  /* Efecto hover ligero */
+  tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  }
+
+  td {
+    display: block;
+    text-align: left;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    width: 100%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #000000;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  } 
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}

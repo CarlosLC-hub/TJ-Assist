@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6eabb275; /* Fondo general suave */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.territorios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto 25px auto;
+}
+
+button {
+  padding: 14px 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button.activo {
+  background-color: #2196F3;
+  color: white;
+  font-weight: bold;
+}
+
+.imagen-container {
+  margin-top: 20px;
+  overflow: hidden;      /* Evita que la imagen se salga del contenedor */
+  touch-action: none;    /* Evita gestos del navegador */
+  position: relative;
+}
+
+.imagen-container img {
+  display: none;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  cursor: zoom-in;
+}
