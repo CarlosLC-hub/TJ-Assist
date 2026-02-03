@@ -1,26 +1,109 @@
+/* =========================== */
+/* CSS GENERAL PARA WEBVIEW    */
+/* =========================== */
+
+/* Reset básico y body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #6eabb275; /* Fondo general suave */
+  font-family: system-ui, sans-serif;
   margin: 0;
+  background: #6eabb275;
+  color: #140821;
+}
+
+/* Hace que todos los títulos h1, h2 y h3 tengan el mismo tamaño */
+h1, h2, h3 {
+    font-size: 1.2rem;  /* tamaño de letra uniforme */
+    font-weight: 600;    /* un poco gruesa */
+    margin: 0.5rem 0;    /* espacio arriba y abajo */
+}
+
+/* Títulos dentro del header */
+header h1, header h2, header h3 {
+  margin-top: 1rem;       /* separación vertical del header */
+  padding-left: 50px;     /* deja espacio a la izquierda para el botón */
+  padding-right: 20px;    /* opcional: para que no toque el borde derecho */
+
+}
+
+
+/* Header */
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 8vh 25px 15px 25px; /* top, right, bottom, left */
+  text-align: center;
+  font-size: 1.2rem;
+  position: relative;
+  font-weight: 600;
+}
+
+/* Botón volver */
+.back {
+  position: absolute;
+  left: 10px;
+  top: 8vh;            /* según tu ajuste para WebView */
+  font-size: 1.2rem;
+  background: transparent;  /* sin color de fondo */
+  border: none;             /* sin borde */
+  padding: 0;               /* elimina espacio interno */
+  margin: 0;                /* elimina margen real */
+  line-height: 3;           /* altura mínima */
+  color: white;
+  cursor: pointer;
+  outline: none;            /* elimina el contorno que aparece al dar click o focus */
+}
+
+
+/* Botones estilo general */
+button {
+  font-size: 1.2rem;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background-color: #59a2ab2c;
+  border: none;
+  cursor: pointer;
+  min-width: 120px;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header {
+  padding-top: calc(8vh + env(safe-area-inset-top));
+}
+header {
+  padding-bottom: 8px;
+}
+.back {
+  top: calc(8vh + env(safe-area-inset-top));
+}
+
+
+
+
+/* Layout general */
+main {
   padding: 20px;
   text-align: center;
-  color: #333;
 }
 
-h1 {
-  font-size: 22px;
-  margin-bottom: 25px;
+.subtitulo {
+  margin-bottom: 10px;
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: large;
 }
 
+/* Grid de botones */
 .territorios-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 8.5px;
   max-width: 400px;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 10px auto;
 }
 
-button {
+/* Botones de territorios */
+.territorios-grid button {
   padding: 14px 10px;
   font-size: 15px;
   border: none;
@@ -28,23 +111,24 @@ button {
   cursor: pointer;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.2s, transform 0.2s;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
-button:hover {
+.territorios-grid button:hover {
   transform: translateY(-2px);
 }
 
-button.activo {
+.territorios-grid button.activo {
   background-color: #2196F3;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
 }
 
+/* Imagen */
 .imagen-container {
-  margin-top: 20px;
-  overflow: hidden;      /* Evita que la imagen se salga del contenedor */
-  touch-action: none;    /* Evita gestos del navegador */
+  margin-top: 4px;
+  overflow: hidden;
+  touch-action: none;
   position: relative;
 }
 
@@ -56,4 +140,12 @@ button.activo {
   transition: transform 0.3s ease;
   transform-origin: center center;
   cursor: zoom-in;
+}
+
+/* Mensaje de zoom */
+#mensaje-zoom {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }

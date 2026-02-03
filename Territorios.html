@@ -4,11 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Territorios</title>
+
+  <!-- CSS propio de la página -->
   <link rel="stylesheet" href="style-territorios.css">
 </head>
+
 <body>
 
-  <h1>TERRITORIOS - CONGREGACIÓN ESPERANZA TENABO</h1>
+<header>
+  <button class="back" onclick="volver()">←</button>
+  <h2>Territorios</h2>
+</header>
+
+<main>
+
+  <p class="subtitulo">Congregación Esperanza Tenabo</p>
 
   <div class="territorios-grid">
     <button onclick="mostrarTerritorio(1)">Territorio 1</button>
@@ -23,14 +33,26 @@
     <button onclick="mostrarTerritorio(10)">Territorio 10<br>(Las Flores)</button>
   </div>
 
+    <div id="mensaje-zoom" style="display:none;">
+    <p>Doble toque para zoom</p>
+    </div>
+
   <div class="imagen-container">
     <img id="imagen-territorio" src="" alt="Territorio">
   </div>
-  <div id="mensaje-zoom" style="display:none;">
-  <p>Doble toque para zoom</p>
-</div>
 
 
+
+</main>
+
+<script>
+  function volver() {
+    window.history.back();
+  }
+</script>
+
+
+<!-- TU SCRIPT ORIGINAL, SIN CAMBIOS -->
 <script>
   const imagen = document.getElementById('imagen-territorio');
 
@@ -187,6 +209,7 @@
     return Math.sqrt(dx * dx + dy * dy);
   }
 </script>
+
 
 </body>
 </html>

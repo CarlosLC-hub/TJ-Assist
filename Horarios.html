@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programa de Predicación</title>
+  <title>Horario</title>
+  <!-- CSS generalizado -->
   <link rel="stylesheet" href="style-horarios.css">
 </head>
 <body>
 
-  <h1>PROGRAMA DE PREDICACIÓN</h1>
-  <h1>CONGREGACIÓN ESPERANZA, TENABO</h1>
+<header>
+  <button class="back" onclick="volver()">←</button>
+  <h1>Horarios</h1>
+</header>
 
+<main>
+  <div><h1>Congregación Esperanza Tenabo</h1></div>
   <!-- SALIDAS DE CONGREGACIÓN POR LAS MAÑANAS -->
-  <h2>SALIDAS DE CONGREGACIÓN POR LAS MAÑANAS</h2>
+  <h2>SALIDAS <b>DE CONGREGACIÓN</b> POR LAS MAÑANAS</h2>
   <table>
     <thead>
       <tr>
@@ -56,7 +61,7 @@
   </table>
 
   <!-- SALIDAS DE CONGREGACIÓN POR LAS TARDES -->
-  <h2>SALIDAS DE CONGREGACIÓN POR LAS TARDES</h2>
+  <h2>SALIDAS <b>DE CONGREGACIÓN</b> POR LAS TARDES</h2>
   <table>
     <thead>
       <tr>
@@ -79,7 +84,7 @@
   </table>
 
   <!-- SALIDAS DE GRUPO POR LAS MAÑANAS -->
-  <h2>SALIDAS DE GRUPO POR LAS MAÑANAS</h2>
+  <h2>SALIDAS <b>DE GRUPO</b> POR LAS MAÑANAS</h2>
   <table class="group-table">
     <thead>
       <tr>
@@ -112,7 +117,7 @@
   </table>
 
   <!-- SALIDAS DE GRUPO POR LA TARDE -->
-  <h2>SALIDAS DE GRUPO POR LA TARDE</h2>
+  <h2>SALIDAS <b>DE GRUPO</b> POR LA TARDE</h2>
   <table class="group-table">
     <thead>
       <tr>
@@ -135,6 +140,14 @@
       </tr>
     </tbody>
   </table>
+</main>
+
+<script>
+  function volver() {
+    window.history.back();
+  }
+</script>
+
 
 </body>
 </html>
