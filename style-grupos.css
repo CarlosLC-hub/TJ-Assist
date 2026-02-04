@@ -20,39 +20,19 @@ h1, h2, h3 {
 
 /* Títulos dentro del header */
 header h1, header h2, header h3 {
-  margin-top: 1rem;
-  padding-left: 50px;
-  padding-right: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  margin-top: 1rem;       /* separación vertical del header */
+  padding-right: 20px;    /* opcional: para que no toque el borde derecho */
 
+}
 /* Header */
 header {
   background: #1e3a8a;
   color: white;
-  padding: calc(8vh + env(safe-area-inset-top)) 25px 8px 25px;
+  padding: 8vh 25px 15px 25px; /* top, right, bottom, left */
   text-align: center;
   font-size: 1.2rem;
   position: relative;
   font-weight: 600;
-}
-
-/* Botón volver */
-.back {
-  position: absolute;
-  left: 10px;
-  top: calc(8vh + env(safe-area-inset-top));
-  font-size: 1.2rem;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  line-height: 3;
-  color: white;
-  cursor: pointer;
-  outline: none;
 }
 
 /* Layout general */
@@ -77,18 +57,7 @@ main {
   margin-bottom: 20px;
 }
 
-button {
-  padding: 12px 20px;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: #59a2ab2c;
-  border: none;
-  min-width: 120px;
-  transition: all 0.15s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-}
+
 button {
   padding: 12px 20px;
   font-size: 1rem;
@@ -97,6 +66,8 @@ button {
   cursor: pointer;
   color: white;
   transition: all 0.15s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
 }
 
 .G1 { background-color: #4CAF50; }

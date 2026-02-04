@@ -12,7 +12,6 @@
 <body>
 
 <header>
-  <button class="back" onclick="volver()">←</button>
   <h2>Territorios</h2>
 </header>
 
@@ -34,7 +33,7 @@
   </div>
 
     <div id="mensaje-zoom" style="display:none;">
-    <p>Doble toque para zoom</p>
+    <p>Tres toques para zoom</p>
     </div>
 
   <div class="imagen-container">
@@ -44,13 +43,6 @@
 
 
 </main>
-
-<script>
-  function volver() {
-    window.history.back();
-  }
-</script>
-
 
 <!-- TU SCRIPT ORIGINAL, SIN CAMBIOS -->
 <script>
@@ -165,8 +157,11 @@
     }
   });
 
-  imagen.addEventListener('touchmove', e => {
+    imagen.addEventListener('touchmove', e => {
+    if (e.touches.length > 1 || scale > 1) {
     e.preventDefault();
+   }
+
 
     // Arrastre
     if (arrastrando && e.touches.length === 1 && scale > 1) {

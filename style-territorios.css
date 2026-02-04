@@ -20,7 +20,6 @@ h1, h2, h3 {
 /* Títulos dentro del header */
 header h1, header h2, header h3 {
   margin-top: 1rem;       /* separación vertical del header */
-  padding-left: 50px;     /* deja espacio a la izquierda para el botón */
   padding-right: 20px;    /* opcional: para que no toque el borde derecho */
 
 }
@@ -35,22 +34,6 @@ header {
   font-size: 1.2rem;
   position: relative;
   font-weight: 600;
-}
-
-/* Botón volver */
-.back {
-  position: absolute;
-  left: 10px;
-  top: 8vh;            /* según tu ajuste para WebView */
-  font-size: 1.2rem;
-  background: transparent;  /* sin color de fondo */
-  border: none;             /* sin borde */
-  padding: 0;               /* elimina espacio interno */
-  margin: 0;                /* elimina margen real */
-  line-height: 3;           /* altura mínima */
-  color: white;
-  cursor: pointer;
-  outline: none;            /* elimina el contorno que aparece al dar click o focus */
 }
 
 
@@ -72,9 +55,6 @@ header {
 }
 header {
   padding-bottom: 8px;
-}
-.back {
-  top: calc(8vh + env(safe-area-inset-top));
 }
 
 
