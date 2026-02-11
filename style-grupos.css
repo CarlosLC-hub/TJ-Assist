@@ -28,7 +28,7 @@ header h1, header h2, header h3 {
 header {
   background: #1e3a8a;
   color: white;
-  padding: 8vh 25px 15px 25px; /* top, right, bottom, left */
+  padding: 6vh 25px 15px 25px; /* top, right, bottom, left */
   text-align: center;
   font-size: 1.2rem;
   position: relative;
@@ -133,3 +133,4 @@ button.activo {
     max-width: 100%;
   }
 }
+
