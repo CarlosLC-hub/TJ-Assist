@@ -15,12 +15,12 @@ h1, h2, h3 {
     font-size: 1.2rem;  /* tamaño de letra uniforme */
     font-weight: 600;    /* un poco gruesa */
     margin: 0.5rem 0;    /* espacio arriba y abajo */
+    text-align: center;
 }
 
 /* Títulos dentro del header */
 header h1, header h2, header h3 {
   margin-top: 1rem;       /* separación vertical del header */
-  padding-right: 20px;    /* opcional: para que no toque el borde derecho */
 
 }
 
@@ -129,4 +129,3 @@ main {
   font-size: 0.9rem;
   opacity: 0.8;
 }
-

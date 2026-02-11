@@ -21,7 +21,7 @@ h1, h2, h3 {
 /* Títulos dentro del header */
 header h1, header h2, header h3 {
   margin-top: 1rem;       /* separación vertical del header */
-  padding-right: 20px;    /* opcional: para que no toque el borde derecho */
+
 
 }
 /* Header */
@@ -133,4 +133,3 @@ button.activo {
     max-width: 100%;
   }
 }
-
