@@ -29,7 +29,7 @@ header h1, header h2, header h3 {
 header {
   background: #1e3a8a;
   color: white;
-  padding: 6vh 25px 15px 25px; /* top, right, bottom, left */
+  padding: 8vh 25px 15px 25px; /* top, right, bottom, left */
   text-align: center;
   font-size: 1.2rem;
   position: relative;
@@ -51,11 +51,9 @@ button {
 }
 
 header {
-  padding-top: calc(8vh + env(safe-area-inset-top));
+  padding-top: calc(6vh + env(safe-area-inset-top));
 }
-header {
-  padding-bottom: 8px;
-}
+
 
 
 
